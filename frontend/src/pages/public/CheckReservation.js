@@ -55,6 +55,17 @@ const CheckReservation = () => {
   const handleEmailBlur = () => {
     if (!bookingCode && email) {
       checkIfAdmin();
+    } else {
+      setShowPasswordField(false);
+    }
+  };
+
+  const handleEmailChange = (value) => {
+    setEmail(value);
+    // Reset password field when email changes
+    if (showPasswordField) {
+      setShowPasswordField(false);
+      setPassword('');
     }
   };
 
@@ -164,7 +175,7 @@ const CheckReservation = () => {
                 <div className="flex-1 border-t border-gray-200" />
               </div>
 
-              <div>
+                <div>
                 <Label htmlFor="email">Email Address</Label>
                 <div className="relative mt-2">
                   <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -172,7 +183,7 @@ const CheckReservation = () => {
                     id="email"
                     type="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => handleEmailChange(e.target.value)}
                     onBlur={handleEmailBlur}
                     placeholder="Enter your email"
                     className="pl-10"
