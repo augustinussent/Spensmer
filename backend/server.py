@@ -836,7 +836,7 @@ async def get_dashboard_stats(user: dict = Depends(require_admin)):
 
 # ============== INIT DEFAULT DATA ==============
 
-@api_router.post("/init")
+@api_router.post("/api/init")
 async def init_default_data():
     admin = await db.users.find_one({"role": "admin"}, {"_id": 0})
     if admin:
