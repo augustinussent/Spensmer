@@ -31,9 +31,9 @@ const Meeting = () => {
   ];
 
   return (
-    <div className="bg-emerald-50/30">
+    <div className="bg-emerald-50/30 pt-16 sm:pt-18 lg:pt-20">
       {/* Hero */}
-      <section className="relative h-[50vh] flex items-center justify-center">
+      <section className="relative h-[50vh] min-h-[350px] flex items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=1920)' }}
