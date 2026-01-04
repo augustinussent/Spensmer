@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Play, X, Users, Maximize2, Volume2, VolumeX, Pause } from 'lucide-react';
+import { Play, X, Users, Maximize2, Volume2, VolumeX, Pause, Images } from 'lucide-react';
 import axios from 'axios';
 import { Button } from '../../components/ui/button';
+import ImageGalleryOverlay from '../../components/ImageGalleryOverlay';
 
 const API_URL = process.env.REACT_APP_BACKEND_URL + '/api';
 
