@@ -293,33 +293,72 @@ const Rooms = () => {
               >
                 {/* Room Image with Video Overlay */}
                 <div className={`${index % 2 === 1 ? 'lg:order-2' : ''}`}>
-                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden group">
+                  {/* Main Image */}
+                  <div className="relative aspect-[4/3] rounded-2xl overflow-hidden group cursor-pointer" onClick={() => openGallery(room, 0)}>
                     <img
                       src={room.images?.[0] || 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800'}
                       alt={room.name}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                     
-                    {/* Video Play Overlay - Always visible with video icon */}
+                    {/* Overlay with actions */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                      {/* Photo count badge */}
+                      {room.images && room.images.length > 1 && (
+                        <div className="absolute top-4 left-4 bg-black/50 text-white text-xs px-3 py-1.5 rounded-full flex items-center gap-1.5 backdrop-blur-sm">
+                          <Images className="w-4 h-4" />
+                          {room.images.length} Foto
+                        </div>
+                      )}
+                      
+                      {/* Video badge */}
+                      {room.video_url && (
+                        <div className="absolute top-4 right-4 bg-black/50 text-white text-xs px-3 py-1.5 rounded-full flex items-center gap-1.5 backdrop-blur-sm">
+                          <Play className="w-4 h-4" />
+                          Video
+                        </div>
+                      )}
+                      
+                      {/* Room Tour Button */}
                       <button
-                        onClick={() => handlePlayVideo(room)}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handlePlayVideo(room);
+                        }}
                         data-testid={`room-video-btn-${room.room_type_id}`}
-                        className="absolute bottom-4 right-4 flex items-center gap-2 bg-white/90 hover:bg-white text-emerald-700 px-4 py-2 rounded-full transition-all shadow-lg hover:shadow-xl group-hover:scale-105"
+                        className="absolute bottom-4 right-4 flex items-center gap-2 bg-white/90 hover:bg-white text-emerald-700 px-4 py-2 rounded-full transition-all shadow-lg hover:shadow-xl"
                       >
                         <Play className="w-5 h-5" />
                         <span className="font-medium text-sm">Room Tour</span>
                       </button>
                     </div>
-
-                    {/* Video Thumbnail indicator */}
-                    {room.video_thumbnail && (
-                      <div className="absolute top-4 left-4 bg-black/50 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
-                        <Play className="w-3 h-3" />
-                        Video
-                      </div>
-                    )}
                   </div>
+
+                  {/* Thumbnail Strip */}
+                  {room.images && room.images.length > 1 && (
+                    <div className="flex gap-2 mt-3 overflow-x-auto pb-2">
+                      {room.images.slice(0, 5).map((img, imgIdx) => (
+                        <button
+                          key={imgIdx}
+                          onClick={() => openGallery(room, imgIdx)}
+                          className={`flex-shrink-0 w-16 h-12 rounded-lg overflow-hidden transition-all hover:ring-2 hover:ring-emerald-500 ${
+                            imgIdx === 0 ? 'ring-2 ring-emerald-500' : ''
+                          }`}
+                          data-testid={`room-thumb-${room.room_type_id}-${imgIdx}`}
+                        >
+                          <img src={img} alt={`${room.name} ${imgIdx + 1}`} className="w-full h-full object-cover" />
+                        </button>
+                      ))}
+                      {room.images.length > 5 && (
+                        <button
+                          onClick={() => openGallery(room, 5)}
+                          className="flex-shrink-0 w-16 h-12 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-700 text-sm font-medium hover:bg-emerald-200 transition-colors"
+                        >
+                          +{room.images.length - 5}
+                        </button>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 {/* Room Details */}
