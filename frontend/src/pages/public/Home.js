@@ -642,15 +642,25 @@ const Home = () => {
                     data-testid={`room-card-${room.room_type_id}`}
                   >
                     <div className="grid grid-cols-1 lg:grid-cols-3">
-                      <div className="relative h-64 lg:h-auto overflow-hidden group">
+                      <div className="relative h-64 lg:h-auto overflow-hidden group cursor-pointer" onClick={() => openGallery(room, 0)}>
                         <img
                           src={room.images?.[0] || 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800'}
                           alt={room.name}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
+                        {/* Photo count badge */}
+                        {room.images && room.images.length > 1 && (
+                          <div className="absolute top-4 left-4 bg-black/50 text-white text-xs px-3 py-1.5 rounded-full flex items-center gap-1.5 backdrop-blur-sm">
+                            <Images className="w-4 h-4" />
+                            {room.images.length} Foto
+                          </div>
+                        )}
                         {/* Room Tour Button */}
                         <button
-                          onClick={() => handlePlayVideo(room)}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            handlePlayVideo(room);
+                          }}
                           data-testid={`room-tour-btn-${room.room_type_id}`}
                           className="absolute bottom-4 right-4 flex items-center gap-2 bg-white/90 hover:bg-white text-emerald-700 px-4 py-2 rounded-full transition-all shadow-lg hover:shadow-xl"
                         >
