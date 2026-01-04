@@ -221,10 +221,6 @@ const Rooms = () => {
   const [showVideoModal, setShowVideoModal] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState({ url: '', name: '' });
 
-  useEffect(() => {
-    fetchRooms();
-  }, []);
-
   const fetchRooms = async () => {
     try {
       const response = await axios.get(`${API_URL}/rooms`);
@@ -233,6 +229,10 @@ const Rooms = () => {
       console.error('Error fetching rooms:', error);
     }
   };
+
+  useEffect(() => {
+    fetchRooms();
+  }, []);
 
   const handlePlayVideo = (room) => {
     const videoUrl = room.video_url || 'https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4';
