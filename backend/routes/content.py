@@ -35,6 +35,8 @@ async def create_content(content: SiteContent, user: dict = Depends(require_admi
     else:
         await db.site_content.insert_one(content_doc)
     
+    # Exclude _id from response (MongoDB adds it during insert)
+    content_doc.pop("_id", None)
     return content_doc
 
 @router.put("/admin/content/{content_id}")
