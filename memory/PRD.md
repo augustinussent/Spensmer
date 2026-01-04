@@ -83,6 +83,26 @@ Build a full-stack Hotel Management System (HMS) for "Spencer Green Hotel Batu" 
 - [x] Created 5 sample reviews with varied ratings
 - [x] Admin approval workflow working (is_visible toggle)
 
+### Phase 6: Full CMS & Room Management ✅ (January 4, 2026)
+- [x] Room Management with full CRUD (Create/Read/Update/Delete)
+  - Create new room with name, price, max guests, description, amenities
+  - Upload room photos via Cloudinary
+  - Upload room tour video
+  - Edit existing rooms
+  - Delete/deactivate rooms
+  - Inventory & Harga tab with weekly/monthly grid view
+  - Bulk update functionality for inventory
+- [x] Content Management for ALL pages:
+  - Home: Hero Section, Promo Banner, About Section
+  - Rooms Page: Hero Section
+  - Meeting: Hero, Meeting Room 1 & 2
+  - Wedding: Hero, Wedding Package 1 & 2
+  - Facilities: Hero, Pool, Spa, Restaurant, Gym
+  - Gallery: Hero, 8 gallery images with categories
+  - Footer: Contact info, Social Media links, Google Maps coordinates
+- [x] New rooms automatically appear in booking engine
+- [x] MongoDB _id serialization bug fixed
+
 ## API Endpoints
 
 ### Public
@@ -131,7 +151,7 @@ Build a full-stack Hotel Management System (HMS) for "Spencer Green Hotel Batu" 
 - [ ] Auto-scroll ke rooms setelah search availability
 
 ### P1 - High Priority
-- [ ] Gallery dengan kategori thumbnails
+- [ ] Gallery dengan kategori thumbnails (frontend implementation)
 - [ ] Dark/Light mode toggle
 - [ ] Email integration testing (Resend)
 
