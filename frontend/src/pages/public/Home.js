@@ -936,24 +936,12 @@ const Home = () => {
       </Dialog>
 
       {/* Video Modal */}
-      <Dialog open={showVideoModal} onOpenChange={setShowVideoModal}>
-        <DialogContent className="max-w-4xl p-0">
-          <button
-            onClick={() => setShowVideoModal(false)}
-            className="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 rounded-full flex items-center justify-center text-white hover:bg-black/70 transition-colors"
-          >
-            <X className="w-5 h-5" />
-          </button>
-          <div className="aspect-video">
-            <iframe
-              src={videoUrl}
-              className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </DialogContent>
-      </Dialog>
+      <VideoModal
+        isOpen={showVideoModal}
+        onClose={() => setShowVideoModal(false)}
+        videoUrl={selectedVideo.url}
+        roomName={selectedVideo.name}
+      />
     </div>
   );
 };
