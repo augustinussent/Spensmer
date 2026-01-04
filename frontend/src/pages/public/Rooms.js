@@ -15,8 +15,11 @@ const VideoModal = ({ isOpen, onClose, videoUrl, roomName }) => {
 
   useEffect(() => {
     if (isOpen && videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
+      videoRef.current.play().then(() => {
+        setIsPlaying(true);
+      }).catch(() => {
+        setIsPlaying(false);
+      });
     }
   }, [isOpen]);
 
