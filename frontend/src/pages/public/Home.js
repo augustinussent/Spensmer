@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { Calendar, Users, Search, Star, Play, X, ChevronLeft, ChevronRight, Tag, ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Calendar, Users, Search, Star, Play, X, ChevronLeft, ChevronRight, Tag, ArrowRight, Pause, Volume2, VolumeX, Maximize2 } from 'lucide-react';
 import { format, addDays, isBefore, startOfToday } from 'date-fns';
 import axios from 'axios';
 import { toast } from 'sonner';
