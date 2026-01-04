@@ -103,6 +103,25 @@ Build a full-stack Hotel Management System (HMS) for "Spencer Green Hotel Batu" 
 - [x] New rooms automatically appear in booking engine
 - [x] MongoDB _id serialization bug fixed
 
+### Phase 7: User Permissions & Room Gallery ✅ (January 4, 2026)
+- [x] User Permissions System:
+  - 8 checkbox permissions: Dashboard, Rooms, Reservations, Content, Reviews, Promo, Users, Gallery
+  - Role-based default permissions (superadmin: all, admin: most, staff: limited)
+  - Permission descriptions in Indonesian
+  - Quick actions: Pilih Semua, Hapus Semua, Reset ke Default
+  - Permission count display in users table ("X dari 8 akses")
+- [x] Room Multiple Photos & Gallery:
+  - Multiple images per room stored as array
+  - Photo count badge on room images ("5 Foto")
+  - Thumbnail strip below main image (max 5 + overflow indicator)
+  - Full-screen gallery overlay with:
+    - Navigation arrows (prev/next)
+    - Image counter (1/5)
+    - Thumbnail navigation
+    - Zoom in/out
+    - Download button
+    - Keyboard navigation (Arrow keys, Escape)
+
 ## API Endpoints
 
 ### Public
