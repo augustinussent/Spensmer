@@ -651,20 +651,31 @@ const Home = () => {
                             ))}
                           </div>
                         </div>
-                        <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-t border-gray-100">
                           <div>
                             <span className="text-emerald-600 font-bold text-2xl">
                               Rp {(room.available_rate || room.base_price).toLocaleString('id-ID')}
                             </span>
                             <span className="text-gray-400 text-sm">/night</span>
                           </div>
-                          <Button
-                            onClick={() => handleBookRoom(room)}
-                            data-testid={`book-room-btn-${room.room_type_id}`}
-                            className="bg-emerald-600 hover:bg-emerald-700 text-white px-8"
-                          >
-                            Book Now
-                          </Button>
+                          <div className="flex items-center gap-3">
+                            <Button
+                              onClick={() => handlePlayVideo(room)}
+                              variant="outline"
+                              className="border-emerald-600 text-emerald-600 hover:bg-emerald-50"
+                              data-testid={`room-tour-outline-btn-${room.room_type_id}`}
+                            >
+                              <Play className="w-4 h-4 mr-2" />
+                              Room Tour
+                            </Button>
+                            <Button
+                              onClick={() => handleBookRoom(room)}
+                              data-testid={`book-room-btn-${room.room_type_id}`}
+                              className="bg-emerald-600 hover:bg-emerald-700 text-white px-8"
+                            >
+                              Book Now
+                            </Button>
+                          </div>
                         </div>
                       </div>
                     </div>
