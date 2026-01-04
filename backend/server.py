@@ -12,7 +12,8 @@ from routes import (
     promo_router,
     content_router,
     admin_router,
-    init_router
+    init_router,
+    media_router
 )
 
 # Configure logging
@@ -34,6 +35,7 @@ api_router.include_router(promo_router)
 api_router.include_router(content_router)
 api_router.include_router(admin_router)
 api_router.include_router(init_router)
+api_router.include_router(media_router)
 
 @api_router.get("/")
 async def root():
