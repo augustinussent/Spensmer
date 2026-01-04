@@ -66,6 +66,15 @@ Build a full-stack Hotel Management System (HMS) for "Spencer Green Hotel Batu" 
 - [x] ContentManagement page with upload dialogs
 - [x] All 40 API tests passing (including 13 new media tests)
 
+### Phase 4: Room Tour Video Player ✅ (January 4, 2026)
+- [x] Full-screen video modal component (VideoModal)
+- [x] HTML5 video player with custom controls (play/pause, mute, fullscreen, progress bar)
+- [x] "Room Tour" button on room image overlays (all pages)
+- [x] "Room Tour" button next to "Book Now" in action row
+- [x] Support for direct video URLs (Cloudinary) and YouTube embeds
+- [x] Animated modal with spring transitions (framer-motion)
+- [x] Implemented on Home page and Rooms page
+
 ## API Endpoints
 
 ### Public
@@ -114,7 +123,6 @@ Build a full-stack Hotel Management System (HMS) for "Spencer Green Hotel Batu" 
 - [ ] Auto-scroll ke rooms setelah search availability
 
 ### P1 - High Priority
-- [ ] Room Tour video player (full-screen)
 - [ ] Display approved reviews on homepage
 - [ ] Gallery dengan kategori thumbnails
 - [ ] Dark/Light mode toggle
