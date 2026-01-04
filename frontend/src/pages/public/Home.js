@@ -623,21 +623,21 @@ const Home = () => {
                     data-testid={`room-card-${room.room_type_id}`}
                   >
                     <div className="grid grid-cols-1 lg:grid-cols-3">
-                      <div className="relative h-64 lg:h-auto overflow-hidden">
+                      <div className="relative h-64 lg:h-auto overflow-hidden group">
                         <img
                           src={room.images?.[0] || 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800'}
                           alt={room.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                         />
-                        {room.video_url && (
-                          <button
-                            onClick={() => handlePlayVideo(room.video_url)}
-                            data-testid={`room-tour-btn-${room.room_type_id}`}
-                            className="absolute top-4 right-4 w-12 h-12 bg-white/90 rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg"
-                          >
-                            <Play className="w-5 h-5 text-emerald-600 ml-1" />
-                          </button>
-                        )}
+                        {/* Room Tour Button */}
+                        <button
+                          onClick={() => handlePlayVideo(room)}
+                          data-testid={`room-tour-btn-${room.room_type_id}`}
+                          className="absolute bottom-4 right-4 flex items-center gap-2 bg-white/90 hover:bg-white text-emerald-700 px-4 py-2 rounded-full transition-all shadow-lg hover:shadow-xl"
+                        >
+                          <Play className="w-5 h-5" />
+                          <span className="font-medium text-sm">Room Tour</span>
+                        </button>
                       </div>
                       <div className="lg:col-span-2 p-6 lg:p-8 flex flex-col justify-between">
                         <div>
