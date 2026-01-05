@@ -447,13 +447,17 @@ const Home = () => {
 
         {/* Booking Engine - Desktop Only, positioned inside viewport */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="hidden md:block absolute bottom-8 left-4 right-4 lg:left-1/2 lg:right-auto lg:-translate-x-1/2 lg:w-[90%] lg:max-w-4xl xl:max-w-5xl"
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.5, duration: 0.6 }}
+  // PERBAIKAN TOTAL: Gunakan inset-x-0 dan mx-auto agar elemen otomatis di tengah tanpa perlu translate-x
+  className="hidden md:block absolute bottom-8 inset-x-0 z-30 px-4"
 >
-          <div className="bg-white rounded-2xl shadow-luxury p-4 lg:p-6 mx-auto" data-testid="booking-engine">
-            <div className="grid grid-cols-4 gap-3 lg:gap-4 items-end">
+  <div 
+    className="bg-white rounded-2xl shadow-luxury p-4 lg:p-6 mx-auto w-full max-w-4xl xl:max-w-5xl border border-emerald-100/50" 
+    data-testid="booking-engine"
+  >
+    <div className="grid grid-cols-4 gap-3 lg:gap-4 items-end">
               {/* Check-in */}
               <div>
                 <Label className="text-gray-600 mb-1.5 block text-sm">Check-in</Label>
