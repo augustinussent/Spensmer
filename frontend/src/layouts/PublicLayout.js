@@ -172,7 +172,7 @@ const PublicLayout = () => {
           </div>
           <div className="rounded-xl overflow-hidden shadow-xl">
             <iframe
-              src="https://maps.google.com/?cid=7706223618368201227&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
+              src={`https://maps.google.com/maps?q=${footerContent?.map?.lat || -7.8332533},${footerContent?.map?.lng || 112.5288334}&hl=id&z=15&output=embed`}
               width="100%"
               height="300"
               style={{ border: 0 }}
