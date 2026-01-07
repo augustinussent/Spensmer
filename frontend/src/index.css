@@ -47,8 +47,22 @@
 }
 
 @layer base {
+    html, body {
+        width: 100%;
+        overflow-x: hidden; /* Mengunci geser kanan-kiri yang merusak layout mobile */
+        margin: 0;
+        padding: 0;
+        -webkit-text-size-adjust: 100%; /* Mencegah teks berubah ukuran sendiri di iPhone */
+    }
+    
     * {
         @apply border-border;
+        box-sizing: border-box;
+    }
+
+        img, video {
+        max-width: 100%;
+        height: auto;
     }
     html {
         font-size: 16px;
