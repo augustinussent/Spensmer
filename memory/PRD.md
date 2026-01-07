@@ -160,7 +160,7 @@ Build a full-stack Hotel Management System (HMS) for "Spencer Green Hotel Batu" 
 - `DELETE /api/media/delete-room-video` - Delete room video
 
 ## Test Credentials
-- **Admin Email**: admin@spencergreen.com
+- **Admin Email**: admin@spencergreenhotel.com
 - **Admin Password**: admin123
 
 ## Prioritized Backlog

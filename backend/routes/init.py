@@ -15,7 +15,7 @@ async def init_default_data():
     
     admin_user = {
         "user_id": str(uuid.uuid4()),
-        "email": "admin@spencergreen.com",
+        "email": "admin@spencergreenhotel.com",
         "password": hash_password("admin123"),
         "name": "Admin",
         "role": "admin",
@@ -98,7 +98,7 @@ async def init_default_data():
             "page": "global",
             "content_type": "whatsapp",
             "content": {
-                "number": "6281334480210"
+                "number": "6281130700206"
             },
             "updated_at": datetime.now(timezone.utc).isoformat()
         },
@@ -108,13 +108,13 @@ async def init_default_data():
             "page": "global",
             "content_type": "info",
             "content": {
-                "address": "Jl. Raya Selecta No. 1, Batu, East Java, Indonesia",
-                "phone": "+62 813 3448 0210",
-                "email": "info@spencergreen.com",
+                "address": "Jl. Raya Punten No.86, Punten, Kec. Bumiaji, Kota Batu, Jawa Timur 65338 Indonesia",
+                "phone": "(0341) 597828",
+                "email": "reservasi@spencergreenhotel.com",
                 "tiktok": "https://tiktok.com/@spencergreenhotel",
                 "instagram": "https://instagram.com/spencergreenhotel",
-                "facebook": "https://facebook.com/spencergreenhotel",
-                "whatsapp": "6281334480210"
+                "facebook": "https://facebook.com/spencergreenhotel86",
+                "whatsapp": "6281130700206"
             },
             "updated_at": datetime.now(timezone.utc).isoformat()
         },
@@ -158,4 +158,4 @@ async def init_default_data():
         })
     await db.site_content.insert_many(gallery_docs)
     
-    return {"message": "Default data initialized", "admin_email": "admin@spencergreen.com", "admin_password": "admin123"}
+    return {"message": "Default data initialized", "admin_email": "admin@spencergreenhotel.com", "admin_password": "admin123"}

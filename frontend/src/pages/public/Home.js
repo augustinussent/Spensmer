@@ -388,7 +388,7 @@ const Home = () => {
       setShowBookingModal(false);
       setBookingForm({ guest_name: '', guest_email: '', guest_phone: '', special_requests: '', promo_code: '' });
       
-      const waNumber = '6281334480210';
+      const waNumber = '6281130700206';
       const message = `Hi, I just made a booking with code ${response.data.booking_code}. I would like to complete the payment.`;
       window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank');
     } catch (error) {

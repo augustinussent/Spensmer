@@ -23,7 +23,7 @@
     "design_issues": []
   },
   "passed_tests": [
-    "Backend API authentication with admin@spencergreen.com / admin123",
+    "Backend API authentication with admin@spencergreenhotel.com / admin123",
     "All room endpoints returning correct data (18/18 API tests passed)",
     "Availability checking and reservation creation",
     "Admin dashboard stats and management features",

@@ -148,8 +148,8 @@ const PublicLayout = () => {
                 <div className="mt-8 pt-8 border-t border-emerald-800">
                   <p className="text-emerald-400 text-sm mb-4">Contact Us</p>
                   <div className="space-y-3 text-emerald-200 text-sm">
-                    <p>{footerContent?.phone || '+62 813 3448 0210'}</p>
-                    <p>{footerContent?.email || 'info@spencergreen.com'}</p>
+                    <p>{footerContent?.phone || '+6281130700206'}</p>
+                    <p>{footerContent?.email || 'reservasi@spencergreenhotel.com'}</p>
                   </div>
                 </div>
               </div>
@@ -168,11 +168,11 @@ const PublicLayout = () => {
         <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 py-8 sm:py-12">
           <div className="text-center mb-6">
             <h3 className="font-display text-xl sm:text-2xl font-bold text-white mb-2">Find Us</h3>
-            <p className="text-emerald-200 text-sm sm:text-base">{footerContent?.address || 'Jl. Raya Selecta No. 1, Batu, East Java, Indonesia'}</p>
+            <p className="text-emerald-200 text-sm sm:text-base">{footerContent?.address || 'Jl. Raya Punten No.86, Punten, Kec. Bumiaji, Kota Batu, Jawa Timur 65338 Indonesia'}</p>
           </div>
           <div className="rounded-xl overflow-hidden shadow-xl">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.3689881253584!2d112.52657531478126!3d-7.878569794336901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e788277c9f2e765%3A0x6c8c9e8e3c8c8c8c!2sJl.%20Raya%20Selecta%2C%20Batu%2C%20East%20Java!5e0!3m2!1sen!2sid!4v1640000000000!5m2!1sen!2sid"
+              src="https://maps.google.com/?cid=7706223618368201227&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ"
               width="100%"
               height="300"
               style={{ border: 0 }}
@@ -205,15 +205,15 @@ const PublicLayout = () => {
               <div className="space-y-3 text-emerald-200 text-sm sm:text-base">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                  <p>{footerContent?.address || 'Jl. Raya Selecta No. 1, Batu, East Java'}</p>
+                  <p>{footerContent?.address || 'Jl. Raya Punten No.86, Punten, Kec. Bumiaji, Kota Batu, Jawa Timur 65338 Indonesia'}</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 flex-shrink-0" />
-                  <p>{footerContent?.phone || '+62 813 3448 0210'}</p>
+                  <p>{footerContent?.phone || '(0341) 597828'}</p>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 flex-shrink-0" />
-                  <p>{footerContent?.email || 'info@spencergreen.com'}</p>
+                  <p>{footerContent?.email || 'reservasi@spencergreenhotel.com'}</p>
                 </div>
               </div>
             </div>
@@ -256,7 +256,7 @@ const PublicLayout = () => {
                   </svg>
                 </a>
                 <a
-                  href={`https://wa.me/${footerContent?.whatsapp || '6281334480210'}`}
+                  href={`https://wa.me/${footerContent?.whatsapp || '6281130700206'}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 sm:w-11 sm:h-11 bg-emerald-800 rounded-full flex items-center justify-center hover:bg-emerald-700 transition-colors"

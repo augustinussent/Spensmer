@@ -141,7 +141,7 @@ const Wedding = () => {
             Let us help you plan the wedding of your dreams
           </p>
           <a 
-            href="https://wa.me/6281334480210?text=Hi,%20I%20want%20to%20inquire%20about%20wedding%20packages"
+            href="https://wa.me/6281130700206?text=Hi,%20I%20want%20to%20inquire%20about%20wedding%20packages"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center bg-white text-emerald-800 px-8 py-4 rounded-full font-semibold hover:bg-emerald-50 transition-colors"

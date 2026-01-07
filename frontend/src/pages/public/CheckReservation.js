@@ -322,7 +322,7 @@ const CheckReservation = () => {
                           </div>
                           {reservation.status === 'pending' && (
                             <a
-                              href={`https://wa.me/6281334480210?text=Hi,%20I%20want%20to%20complete%20payment%20for%20booking%20${reservation.booking_code}`}
+                              href={`https://wa.me/6281130700206?text=Hi,%20I%20want%20to%20complete%20payment%20for%20booking%20${reservation.booking_code}`}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="flex items-center bg-green-500 text-white px-6 py-3 rounded-full font-medium hover:bg-green-600 transition-colors"

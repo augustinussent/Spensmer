@@ -577,18 +577,18 @@ const ContentManagement = () => {
                 <Textarea
                   value={getContent('global', 'footer', 'address')}
                   onChange={(e) => updateField('global_footer', 'address', e.target.value)}
-                  placeholder="Jl. Raya Selecta No. 1, Batu, East Java"
+                  placeholder="Jl. Raya Punten No.86, Punten, Kec. Bumiaji, Kota Batu, Jawa Timur 65338 Indonesia"
                   rows={2}
                 />
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <Label>Telepon</Label>
-                  <Input value={getContent('global', 'footer', 'phone')} onChange={(e) => updateField('global_footer', 'phone', e.target.value)} placeholder="+62 813 3448 0210" />
+                  <Input value={getContent('global', 'footer', 'phone')} onChange={(e) => updateField('global_footer', 'phone', e.target.value)} placeholder="+6281130700206" />
                 </div>
                 <div>
                   <Label>Email</Label>
-                  <Input value={getContent('global', 'footer', 'email')} onChange={(e) => updateField('global_footer', 'email', e.target.value)} placeholder="info@spencergreen.com" />
+                  <Input value={getContent('global', 'footer', 'email')} onChange={(e) => updateField('global_footer', 'email', e.target.value)} placeholder="reservasi@spencergreenhotel.com" />
                 </div>
               </div>
             </div>
@@ -611,7 +611,7 @@ const ContentManagement = () => {
                 </div>
                 <div>
                   <Label>WhatsApp Number</Label>
-                  <Input value={getContent('global', 'footer', 'whatsapp')} onChange={(e) => updateField('global_footer', 'whatsapp', e.target.value)} placeholder="6281334480210" />
+                  <Input value={getContent('global', 'footer', 'whatsapp')} onChange={(e) => updateField('global_footer', 'whatsapp', e.target.value)} placeholder="6281130700206" />
                 </div>
               </div>
               <Button onClick={() => saveContent('global', 'footer', 'info', content['global_footer']?.content || {})} disabled={isSaving} className="bg-emerald-600 hover:bg-emerald-700 text-white">

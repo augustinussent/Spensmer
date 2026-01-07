@@ -79,7 +79,7 @@ class SpencerGreenAPITester:
         
         # Test login with admin credentials
         login_data = {
-            "email": "admin@spencergreen.com",
+            "email": "admin@spencergreenhotel.com",
             "password": "admin123"
         }
         

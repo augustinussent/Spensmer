@@ -39,7 +39,7 @@
   "seed_data_creation": "Test data created with TEST_ prefix during testing, cleaned up after tests",
   "retest_needed": false,
   "should_main_agent_self_test": true,
-  "context_for_next_testing_agent": "Room Management and Content Management features fully tested and working. Bug fixes applied: MongoDB _id exclusion in POST endpoints for rooms and content. Test files: /app/tests/test_room_content_management.py (17 tests for Room CRUD, Content CRUD, Inventory integration). Admin credentials: admin@spencergreen.com / admin123. 3 room types available (Superior, Deluxe, Executive). Content Management has 7 tabs (Home, Rooms Page, Meeting, Wedding, Facilities, Gallery, Footer). Inventory tab shows weekly view with bulk update functionality.",
+  "context_for_next_testing_agent": "Room Management and Content Management features fully tested and working. Bug fixes applied: MongoDB _id exclusion in POST endpoints for rooms and content. Test files: /app/tests/test_room_content_management.py (17 tests for Room CRUD, Content CRUD, Inventory integration). Admin credentials: admin@spencergreenhotel.com / admin123. 3 room types available (Superior, Deluxe, Executive). Content Management has 7 tabs (Home, Rooms Page, Meeting, Wedding, Facilities, Gallery, Footer). Inventory tab shows weekly view with bulk update functionality.",
   "test_results": {
     "total_tests": 57,
     "passed": 57,

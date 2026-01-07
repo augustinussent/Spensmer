@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 async def send_reservation_email(reservation: dict, room_type: dict):
     whatsapp_doc = await db.site_content.find_one({"section": "contact", "content_type": "whatsapp"}, {"_id": 0})
-    wa_number = whatsapp_doc.get("content", {}).get("number", "6281334480210") if whatsapp_doc else "6281334480210"
+    wa_number = whatsapp_doc.get("content", {}).get("number", "6281130700206") if whatsapp_doc else "6281130700206"
     
     html_content = f"""
     <div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #fff;">
@@ -64,7 +64,7 @@ async def send_reservation_email(reservation: dict, room_type: dict):
         </div>
         <div style="background: #064e3b; padding: 20px; text-align: center;">
             <p style="color: #d1fae5; margin: 0; font-size: 14px;">Spencer Green Hotel Batu</p>
-            <p style="color: #a7f3d0; margin: 5px 0 0 0; font-size: 12px;">Jl. Raya Selecta No. 1, Batu, East Java</p>
+            <p style="color: #a7f3d0; margin: 5px 0 0 0; font-size: 12px;">Jl. Raya Punten No.86, Punten, Kec. Bumiaji, Kota Batu, Jawa Timur 65338 Indonesia</p>
         </div>
     </div>
     """

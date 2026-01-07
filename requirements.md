@@ -59,5 +59,5 @@ Build a full-stack Hotel Management System (HMS) for Spencer Green Hotel Batu wi
 7. Add SEO optimization
 
 ## Credentials
-- Admin: admin@spencergreen.com / admin123
+- Admin: admin@spencergreenhotel.com / admin123
 - WhatsApp: 6281334480210

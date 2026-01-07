@@ -31,7 +31,7 @@
   "seed_data_creation": "Test users created with TEST_ prefix during testing, cleaned up after tests",
   "retest_needed": false,
   "should_main_agent_self_test": true,
-  "context_for_next_testing_agent": "User Permissions and Room Gallery features fully tested. Admin credentials: admin@spencergreen.com / admin123. Users page shows 'Hak Akses' column with permission count (e.g., '8 dari 8 akses'). Edit modal has 8 checkbox permissions with quick actions (Pilih Semua, Hapus Semua, Reset ke Default). Rooms page shows photo badge ('5 Foto'), thumbnail strip, and gallery overlay with navigation. Superior Room has 5 images for testing.",
+  "context_for_next_testing_agent": "User Permissions and Room Gallery features fully tested. Admin credentials: admin@spencergreenhotel.com / admin123. Users page shows 'Hak Akses' column with permission count (e.g., '8 dari 8 akses'). Edit modal has 8 checkbox permissions with quick actions (Pilih Semua, Hapus Semua, Reset ke Default). Rooms page shows photo badge ('5 Foto'), thumbnail strip, and gallery overlay with navigation. Superior Room has 5 images for testing.",
   "features_tested": {
     "user_permissions": {
       "api_endpoints": [

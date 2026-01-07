@@ -37,7 +37,7 @@
   "seed_data_creation": "Test data created with TEST_ prefix for reservations and reviews during testing",
   "retest_needed": false,
   "should_main_agent_self_test": true,
-  "context_for_next_testing_agent": "Backend refactoring and Cloudinary integration complete and verified. All 40 tests pass including 13 new media endpoint tests. Test files: /app/tests/test_spencer_hotel_api.py (27 tests for core API), /app/tests/test_media_endpoints.py (13 tests for media upload validation). Admin credentials: admin@spencergreen.com / admin123. Login route is /login (not /admin/login). ContentManagement page at /admin/content has 4 tabs: Home, Rooms, Gallery, Footer. 3 room types available (Superior, Deluxe, Executive). Cloudinary credentials configured in backend/.env.",
+  "context_for_next_testing_agent": "Backend refactoring and Cloudinary integration complete and verified. All 40 tests pass including 13 new media endpoint tests. Test files: /app/tests/test_spencer_hotel_api.py (27 tests for core API), /app/tests/test_media_endpoints.py (13 tests for media upload validation). Admin credentials: admin@spencergreenhotel.com / admin123. Login route is /login (not /admin/login). ContentManagement page at /admin/content has 4 tabs: Home, Rooms, Gallery, Footer. 3 room types available (Superior, Deluxe, Executive). Cloudinary credentials configured in backend/.env.",
   "test_results": {
     "total_tests": 40,
     "passed": 40,

@@ -31,7 +31,7 @@
   "seed_data_creation": "Test data created with TEST_ prefix for reservations and reviews during testing",
   "retest_needed": false,
   "should_main_agent_self_test": true,
-  "context_for_next_testing_agent": "Backend refactoring complete and verified. All 8 route modules (auth, rooms, reservations, reviews, promo, content, admin, init) are working correctly. Test file /app/tests/test_spencer_hotel_api.py covers all major endpoints. Admin credentials: admin@spencergreen.com / admin123. 3 room types available (Superior, Deluxe, Executive). 60 days of inventory pre-populated.",
+  "context_for_next_testing_agent": "Backend refactoring complete and verified. All 8 route modules (auth, rooms, reservations, reviews, promo, content, admin, init) are working correctly. Test file /app/tests/test_spencer_hotel_api.py covers all major endpoints. Admin credentials: admin@spencergreenhotel.com / admin123. 3 room types available (Superior, Deluxe, Executive). 60 days of inventory pre-populated.",
   "test_results": {
     "total_tests": 27,
     "passed": 27,
