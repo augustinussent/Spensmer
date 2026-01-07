@@ -13,6 +13,31 @@ import MediaUpload from '../../components/MediaUpload';
 
 const API_URL = process.env.REACT_APP_BACKEND_URL + '/api';
 
+// Section Component for reusability
+  const ContentSection = ({ title, children }) => (
+    <div className="bg-white rounded-xl p-6 shadow-soft">
+      <h3 className="font-display text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+        <Image className="w-5 h-5 text-emerald-600" />
+        {title}
+      </h3>
+      {children}
+    </div>
+  );
+
+  const ImageField = ({ label, value, onChange, onUpload }) => (
+    <div>
+      <Label>{label}</Label>
+      <div className="flex gap-2">
+        <Input value={value} onChange={onChange} placeholder="https://..." className="flex-1" />
+        <Button type="button" variant="outline" onClick={onUpload}>
+          <Upload className="w-4 h-4 mr-2" />
+          Upload
+        </Button>
+      </div>
+      {value && <img src={value} alt="Preview" className="mt-2 rounded-lg h-24 object-cover" />}
+    </div>
+  );
+
 const ContentManagement = () => {
   const [content, setContent] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -102,32 +127,7 @@ const ContentManagement = () => {
     );
   }
 
-  // Section Component for reusability
-  const ContentSection = ({ title, children }) => (
-    <div className="bg-white rounded-xl p-6 shadow-soft">
-      <h3 className="font-display text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-        <Image className="w-5 h-5 text-emerald-600" />
-        {title}
-      </h3>
-      {children}
-    </div>
-  );
-
-  const ImageField = ({ label, value, onChange, onUpload }) => (
-    <div>
-      <Label>{label}</Label>
-      <div className="flex gap-2">
-        <Input value={value} onChange={onChange} placeholder="https://..." className="flex-1" />
-        <Button type="button" variant="outline" onClick={onUpload}>
-          <Upload className="w-4 h-4 mr-2" />
-          Upload
-        </Button>
-      </div>
-      {value && <img src={value} alt="Preview" className="mt-2 rounded-lg h-24 object-cover" />}
-    </div>
-  );
-
-  return (
+    return (
     <div data-testid="content-management">
       <div className="mb-8">
         <h1 className="font-display text-3xl font-bold text-gray-900">Kelola Konten</h1>
