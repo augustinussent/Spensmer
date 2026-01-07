@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import { AuthProvider } from "./context/AuthContext";
@@ -28,6 +29,13 @@ import ContentManagement from "./pages/admin/ContentManagement";
 import "./App.css";
 
 function App() {
+  useEffect(() => {
+    const staticSEO = document.getElementById("seo-static-content");
+    if (staticSEO) {
+      staticSEO.remove(); 
+    }
+  }, []);
+  
   return (
     <AuthProvider>
       <BrowserRouter>

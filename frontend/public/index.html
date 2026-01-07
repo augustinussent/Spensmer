@@ -1,28 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="Spencer Green Hotel" />
-        <!--
-        manifest.json provides metadata used when your web app is installed on a
-        user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-        -->
-        <!--
-        Notice the use of %PUBLIC_URL% in the tags above.
-        It will be replaced with the URL of the `public` folder during the build.
-        Only files inside the `public` folder can be referenced from the HTML.
+        <title>Spencer Green Hotel Batu | Hotel Eco-Friendly & Villa Premium</title>
+    <meta name="description" content="Situs resmi Spencer Green Hotel Batu. Akomodasi premium eco-friendly di Jl. Raya Punten No.86, Kota Batu. View pegunungan Arjuno, kolam renang, dan rooftop cafe." />
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Hotel",
+      "name": "Spencer Green Hotel Batu",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Raya Punten No.86, Punten",
+        "addressLocality": "Batu",
+        "addressRegion": "Jawa Timur",
+        "postalCode": "65338",
+        "addressCountry": "ID"
+      }
+    }
+    </script>
 
-        Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-        work correctly both with client-side routing and a non-root public URL.
-        Learn how to configure a non-root public URL by running `npm run build`.
-        -->
-        <title>Spencer Green Hotel Batu Malang</title>
-        <script src="https://assets.emergent.sh/scripts/emergent-main.js"></script>
-        <!--
-        These two scripts have been added for the Visual Edits, please do not edit or remove them
-        -->
+    <style>
+        /* CSS INI WAJIB: Agar konten SEO tidak muncul sedetik pun saat loading */
+        .seo-hidden-content {
+            display: block !important;
+            position: absolute !important;
+            width: 1px !important;
+            height: 1px !important;
+            padding: 0 !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            clip: rect(0, 0, 0, 0) !important;
+            white-space: nowrap !important;
+            border: 0 !important;
+        }
+    </style>
         <style>
     .wa-float {
         position: fixed;
@@ -79,7 +91,12 @@
 <div class="wa-tooltip">Chat WhatsApp Kami</div>
     </head>
     <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="seo-static-content" class="seo-hidden-content">
+        <h1>Spencer Green Hotel Batu</h1>
+        <p>Hotel di Batu Malang dengan konsep eco-friendly. Berlokasi di Jl. Raya Punten No.86.</p>
+        <h2>Rekomendasi Hotel & Villa di Kota Batu</h2>
+        <p>Nikmati fasilitas kolam renang, rooftop cafe, dan view pegunungan Arjuno yang indah.</p>
+    </div>
         <div id="root"></div>
         <!--
       This HTML file is a template.
